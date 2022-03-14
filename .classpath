@@ -16,7 +16,7 @@
 	<classpathentry kind="src" path="wekafiles/packages/LibLINEAR/src/test/java"/>
 	<classpathentry kind="src" path="wekafiles/packages/LibSVM/src/main/java"/>
 	<classpathentry kind="src" path="wekafiles/packages/LibSVM/src/test/java"/>
-	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+	<classpathentry exported="true" kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>

@@ -38,6 +38,8 @@
 	  <scope>provided</scope>
 	</dependency>
 	<dependency>
+	  <groupId>javax.xml.parsers</groupId>
+	  <artifactId>jaxp-api</artifactId>
 	  <groupId>org.w3c</groupId>
 	  <artifactId>dom</artifactId>
 	  <version>2.3.0-jaxb-1.0.6</version>
@@ -53,12 +55,26 @@
           <groupId>javax.xml.parsers</groupId>
           <artifactId>jaxp-api</artifactId>
         </exclusion>
+        <exclusion>
+          <groupId>org.w3c</groupId>
+          <artifactId>dom</artifactId>
+        </exclusion>
       </exclusions>
 	</dependency>
 	<dependency>
 	  <groupId>com.thoughtworks.xstream</groupId>
 	  <artifactId>xstream-hibernate</artifactId>
 	  <version>1.4.19</version>
+      <exclusions>
+        <exclusion>
+          <groupId>javax.xml.parsers</groupId>
+          <artifactId>jaxp-api</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.w3c</groupId>
+          <artifactId>dom</artifactId>
+        </exclusion>
+      </exclusions>
 	</dependency>
     <dependency>
 	  <groupId>edu.stanford.nlp</groupId>
@@ -68,6 +84,10 @@
         <exclusion>
           <groupId>javax.xml.parsers</groupId>
           <artifactId>jaxp-api</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.w3c</groupId>
+          <artifactId>dom</artifactId>
         </exclusion>
         <exclusion>
         	<groupId>javax.xml.bind</groupId>
@@ -110,6 +130,14 @@
 	  <artifactId>stanford-parser</artifactId>
 	  <version>3.9.2</version>
 	  <exclusions>
+        <exclusion>
+          <groupId>javax.xml.parsers</groupId>
+          <artifactId>jaxp-api</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.w3c</groupId>
+          <artifactId>dom</artifactId>
+        </exclusion>
 	  	<exclusion>
 	  		<groupId>org.slf4j</groupId>
 	  		<artifactId>slf4j-api</artifactId>
@@ -126,22 +154,60 @@
 	  <groupId>com.yeriho.yeritools</groupId>
 	  <artifactId>yeritools-min</artifactId>
 	  <version>1.0</version>
+      <exclusions>
+        <exclusion>
+          <groupId>javax.xml.parsers</groupId>
+          <artifactId>jaxp-api</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.w3c</groupId>
+          <artifactId>dom</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.13.2</version>
+      <exclusions>
+        <exclusion>
+          <groupId>javax.xml.parsers</groupId>
+          <artifactId>jaxp-api</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.w3c</groupId>
+          <artifactId>dom</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
 	<dependency>
 	  <groupId>se.datadosen.riverlayout</groupId>
 	  <artifactId>riverlayout</artifactId>
 	  <version>1.1</version>
+      <exclusions>
+        <exclusion>
+          <groupId>javax.xml.parsers</groupId>
+          <artifactId>jaxp-api</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.w3c</groupId>
+          <artifactId>dom</artifactId>
+        </exclusion>
+      </exclusions>
 	</dependency>
 	<dependency>
 	  <groupId>nz.ac.waikato.cms.weka</groupId>
 	  <artifactId>weka-stable</artifactId>
 	  <version>3.8.0</version>
 	  <exclusions>
+        <exclusion>
+          <groupId>javax.xml.parsers</groupId>
+          <artifactId>jaxp-api</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.w3c</groupId>
+          <artifactId>dom</artifactId>
+        </exclusion>
 	  	<exclusion>
 	  		<groupId>net.sourceforge.f2j</groupId>
 	  		<artifactId>arpack_combined_all</artifactId>
@@ -169,6 +235,14 @@
 	  <artifactId>LibSVM</artifactId>
 	  <version>1.0.10</version>
 	  <exclusions>
+        <exclusion>
+          <groupId>javax.xml.parsers</groupId>
+          <artifactId>jaxp-api</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.w3c</groupId>
+          <artifactId>dom</artifactId>
+        </exclusion>
 	  	<exclusion>
 	  		<groupId>jakarta.activation</groupId>
 	  		<artifactId>jakarta.activation-api</artifactId>
@@ -200,6 +274,16 @@
       <groupId>nz.ac.waikato.cms.weka</groupId>
       <artifactId>AbstractClassifierTest</artifactId>
       <version>3.7.11</version>
+      <exclusions>
+        <exclusion>
+          <groupId>javax.xml.parsers</groupId>
+          <artifactId>jaxp-api</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.w3c</groupId>
+          <artifactId>dom</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
 	<dependency>
 	  <groupId>com.oracle.database.xml</groupId>
@@ -210,23 +294,55 @@
           <groupId>javax.xml.parsers</groupId>
           <artifactId>jaxp-api</artifactId>
         </exclusion>
+        <exclusion>
+          <groupId>org.w3c</groupId>
+          <artifactId>dom</artifactId>
+        </exclusion>
       </exclusions>
 	</dependency>
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-math3</artifactId>
       <version>3.6.1</version>
+      <exclusions>
+        <exclusion>
+          <groupId>javax.xml.parsers</groupId>
+          <artifactId>jaxp-api</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.w3c</groupId>
+          <artifactId>dom</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>plugins</groupId>
       <artifactId>features</artifactId>
       <version>1.0</version>
+      <exclusions>
+        <exclusion>
+          <groupId>javax.xml.parsers</groupId>
+          <artifactId>jaxp-api</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.w3c</groupId>
+          <artifactId>dom</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.simpleframework</groupId>
       <artifactId>simple-http</artifactId>
       <version>6.0.1</version>
       <exclusions>
+        <exclusion>
+          <groupId>javax.xml.parsers</groupId>
+          <artifactId>jaxp-api</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.w3c</groupId>
+          <artifactId>dom</artifactId>
+        </exclusion>
       	<exclusion>
       		<groupId>org.simpleframework</groupId>
       		<artifactId>simple-common</artifactId>
@@ -241,6 +357,16 @@
       <groupId>org.simpleframework</groupId>
       <artifactId>simple</artifactId>
       <version>5.1.6</version>
+      <exclusions>
+        <exclusion>
+          <groupId>javax.xml.parsers</groupId>
+          <artifactId>jaxp-api</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.w3c</groupId>
+          <artifactId>dom</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
   </dependencies>
   
