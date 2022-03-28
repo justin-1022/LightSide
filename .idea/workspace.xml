@@ -6,15 +6,28 @@
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
+    <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7079acab-f889-4599-ab85-6de50e559370" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/LightSide_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/LightSide_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LightSide.jar" beforeDir="false" afterPath="$PROJECT_DIR$/LightSide.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/genesis.jar" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/genesis.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/cmu/side/plugin/control/PluginWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/cmu/side/plugin/control/PluginWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/weka/attributeSelection/ChiSquaredAttributeEval.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/weka/attributeSelection/ChiSquaredAttributeEvalTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/weka/classifiers/bayes/BayesianLogisticRegression.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/weka/classifiers/bayes/BayesianLogisticRegressionTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/weka/classifiers/bayes/blr/GaussianPriorImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/weka/classifiers/bayes/blr/LaplacePriorImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/weka/classifiers/bayes/blr/Prior.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/weka/classifiers/functions/LibLINEAR.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/weka/classifiers/functions/LibLINEARTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/weka/classifiers/functions/LibSVM.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/weka/classifiers/functions/LibSVMTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +50,27 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="LightSide" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="LightSide" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="LightSide" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="LightSide" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -77,14 +110,24 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable" value="ALL" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.24942529" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+    <property name="project.structure.side.proportion" value="0.40987656" />
+    <property name="settings.editor.selected.configurable" value="com.intellij.jarRepository.settings.RemoteRepositoriesConfigurable" />
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="gradle wrapper --distribution-type all" />
+      <command value="gradle run.sh" />
+      <command value="gradle debug" />
+      <command value="gradle run" />
+      <command value="gradle run --scan" />
+    </option>
   </component>
   <component name="RunManager" selected="Shell Script.run.sh">
-    <configuration name="Tests in 'LightSide'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="LightSide [debug]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -95,19 +138,64 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":test" />
+            <option value="debug" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="LightSide.jar" type="JarApplication" temporary="true">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/LightSide.jar" />
+    <configuration name="LightSide [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="run" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
+    </configuration>
+    <configuration name="LightSide [run.sh]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="run.sh" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="build.gradle.kts" type="KotlinStandaloneScriptRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="LightSide" />
+      <option name="filePath" value="$PROJECT_DIR$/build.gradle.kts" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="run.sh" type="ShConfigurationType" temporary="true">
       <option name="SCRIPT_TEXT" value="" />
@@ -124,11 +212,20 @@
       <envs />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Shell Script.run.sh" />
+      <item itemvalue="Kotlin script.build.gradle.kts" />
+      <item itemvalue="Gradle.LightSide [run.sh]" />
+      <item itemvalue="Gradle.LightSide [debug]" />
+      <item itemvalue="Gradle.LightSide [run]" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Shell Script.run.sh" />
-        <item itemvalue="JAR Application.LightSide.jar" />
-        <item itemvalue="Gradle.Tests in 'LightSide'" />
+        <item itemvalue="Gradle.LightSide [run]" />
+        <item itemvalue="Gradle.LightSide [debug]" />
+        <item itemvalue="Gradle.LightSide [run.sh]" />
+        <item itemvalue="Kotlin script.build.gradle.kts" />
       </list>
     </recent_temporary>
   </component>
@@ -167,7 +264,15 @@
           <line>950</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/edu/cmu/side/plugin/control/PluginWrapper.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/LightSide$Tests_in__LightSide_.ic" NAME="Tests in 'LightSide' Coverage Results" MODIFIED="1648481028777" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
