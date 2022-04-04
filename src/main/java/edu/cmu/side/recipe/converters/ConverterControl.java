@@ -129,6 +129,9 @@ public class ConverterControl
 	{
 		XStream stream = getXStream();
 		stream.addPermission(AnyTypePermission.ANY);
+		stream.allowTypesByWildcard(new String[] {
+				"edu.cmu.side.**",
+		});
 		Recipe r =(Recipe) stream.fromXML(new InputStreamReader(new FileInputStream(file), Charset.forName("UTF-8")));
         
 		return r;
