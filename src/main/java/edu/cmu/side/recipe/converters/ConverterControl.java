@@ -21,6 +21,7 @@ import java.util.zip.ZipOutputStream;
 
 import com.thoughtworks.xstream.XStream;
 
+import com.thoughtworks.xstream.security.AnyTypePermission;
 import edu.cmu.side.model.Recipe;
 
 //TODO: explicitly enable reading/writing of UTF-8 recipes. 
@@ -127,6 +128,7 @@ public class ConverterControl
 	public static Recipe readFromXML(File file) throws IOException
 	{
 		XStream stream = getXStream();
+		stream.addPermission(AnyTypePermission.ANY);
 		Recipe r =(Recipe) stream.fromXML(new InputStreamReader(new FileInputStream(file), Charset.forName("UTF-8")));
         
 		return r;
