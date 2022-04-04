@@ -6,6 +6,6 @@ set "v1=%%k"
 )
 
 if %v0% == 1 if %v1% lss 8 echo LightSide requires Java 1.8 or greater
-if %v0% == 1 if %v1% == 8 call LightSIDE-java8.bat 
-if %v0% == 1 if %v1% gtr 8 call LightSIDE-java9plus.bat 
-if %v0% gtr 1 call LightSIDE-java9plus.bat 
+if %v0% == 1 if %v1% == 8 call LightSide-java8.bat 
+if %v0% == 1 if %v1% gtr 8 call LightSide-java9plus.bat 
+if %v0% gtr 1 call LightSide-java9plus.bat 
