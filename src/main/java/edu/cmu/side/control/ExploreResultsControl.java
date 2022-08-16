@@ -13,6 +13,7 @@ import edu.cmu.side.plugin.control.PluginManager;
 import edu.cmu.side.view.generic.ActionBar;
 import edu.cmu.side.view.util.Refreshable;
 import edu.cmu.side.view.util.SwingUpdaterLabel;
+import java.util.logging.Logger;
 
 public class ExploreResultsControl extends GenesisControl{
 
@@ -25,19 +26,24 @@ public class ExploreResultsControl extends GenesisControl{
 	private static Feature highlightedFeature;
 	
 	private static ActionBar actionBar;
+	protected static Logger logger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 	
 
 	static{
 		modelAnalysisPlugins = new TreeMap<EvaluateOneModelPlugin, Boolean>();
+		logger.info("ExploreResultsControl, constructor - about to set modelAnalysisPlugins");
 		SIDEPlugin[] modelEvaluations = PluginManager.getSIDEPluginArrayByType("model_analysis");
 		for(SIDEPlugin fe : modelEvaluations){
+			logger.info("ExploreResultsControl, constructor - adding to modelAnalysisPlugins: " + fe.toString());
 			modelAnalysisPlugins.put((EvaluateOneModelPlugin)fe, false);
 		}
 
 		featureEvaluationPlugins = new TreeMap<ModelFeatureMetricPlugin, Map<String, Boolean>>();
+		logger.info("ExploreResultsControl, constructor - about to set featureEvaluationPlugins");
 		SIDEPlugin[] tableEvaluations = PluginManager.getSIDEPluginArrayByType("model_feature_evaluation");
 		for(SIDEPlugin fe : tableEvaluations){
 			ModelFeatureMetricPlugin plugin = (ModelFeatureMetricPlugin)fe;
+			logger.info("ExploreResultsControl, constructor - adding to featureEvaluationPlugins: " + fe.toString());
 			featureEvaluationPlugins.put(plugin, new TreeMap<String, Boolean>());
 			for(Object s : plugin.getAvailableEvaluations().keySet()){
 				featureEvaluationPlugins.get(plugin).put(s.toString(), false);

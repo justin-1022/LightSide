@@ -78,12 +78,14 @@ public class PluginManager {
 	
 	public static SIDEPlugin[] getSIDEPluginArrayByType(String type)
 	{
+
 		List<SIDEPlugin> sidePluginList = new ArrayList<SIDEPlugin>();
 		
 		Collection<PluginWrapper> pluginWrapperCollection =  getSharedPluginManager().getPluginTypeMap().get(type);
 		for(PluginWrapper pluginWrapper : pluginWrapperCollection){
 			SIDEPlugin sidePlugin = pluginWrapper.getSIDEPlugin();
 			sidePluginList.add(sidePlugin);
+			System.err.println("PluginManager, getSIDEPluginArrayByType - added " + sidePlugin.toString());
 		}
 		return sidePluginList.toArray(new SIDEPlugin[0]);
 	}
