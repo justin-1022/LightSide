@@ -58,7 +58,7 @@ dependencies {
 group = "edu.cmu.side"
 version = "1.0-SNAPSHOT"
 description = "LightSide"
-java.sourceCompatibility = JavaVersion.VERSION_1_8
+java.sourceCompatibility = JavaVersion.VERSION_17
 
 val testsJar by tasks.registering(Jar::class) {
     archiveClassifier.set("tests")
