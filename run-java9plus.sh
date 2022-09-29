@@ -20,7 +20,6 @@ MAIN_CLASS="edu.cmu.side.Workbench"
 
 JAR="LightSide.jar"
 
-ADD_OPENS="java.xml/com.sun.org.apache.xml.internal.serialize=ALL-UNNAMED"
+# ADD_OPENS="java.xml/com.sun.org.apache.xml.internal.serialize=ALL-UNNAMED"
     
-java -cp $JAR $OS_ARGS -Xmx$MAXHEAP $OTHER_ARGS --add-opens $ADD_OPENS -splash:toolkits/icons/logo.png $MAIN_CLASS $@
-
+java -cp $JAR $OS_ARGS -Xmx$MAXHEAP $OTHER_ARGS --add-opens java.xml/com.sun.org.apache.xml.internal.serialize=ALL-UNNAMED --add-opens java.base/java.util=ALL-UNNAMED -splash:toolkits/icons/logo.png $MAIN_CLASS $@

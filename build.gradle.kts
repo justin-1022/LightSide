@@ -89,3 +89,30 @@ val compileTestKotlin: KotlinCompile by tasks
 compileTestKotlin.kotlinOptions {
     jvmTarget = "17"
 }
+
+reporting.baseDir = file("$buildDir/gradle-reports")
+project.setProperty("testResultsDirName", "$buildDir/gradle-results")
+
+tasks.register("showDirs") {
+    doLast {
+        logger.quiet(rootDir.toPath().relativize((project.property("buildDir") as File).toPath()).toString())
+        logger.quiet(rootDir.toPath().relativize((project.property("reportsDir") as File).toPath()).toString())
+        logger.quiet(rootDir.toPath().relativize((project.property("testResultsDir") as File).toPath()).toString())
+    }
+}
+
+tasks.test {
+    useJUnitPlatform()
+//    useJUnit()
+    testLogging.showStandardStreams = true
+    testLogging {
+        events("passed", "skipped", "failed")
+    }
+}
+
+tasks.withType<JavaCompile> {
+    options.compilerArgs.addAll(arrayOf(
+        "--add-exports", "java.xml/com.sun.org.apache.xml.internal.serialize=ALL-UNNAMED",
+        "--add-exports", "java.base/java.util=ALL-UNNAMED"
+    ))
+}
