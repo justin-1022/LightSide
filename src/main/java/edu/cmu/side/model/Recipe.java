@@ -462,7 +462,7 @@ public class Recipe implements Serializable
 	
 	private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException, InstantiationException, IllegalAccessException
 	{
-		//System.out.println("reading "+this + " from "+in);
+		System.out.println("reading "+this + " from "+in);
 		stage = (RecipeManager.Stage) in.readObject();
 		recipeName = (String) in.readObject();
 		extractors = (OrderedPluginMap) in.readObject();

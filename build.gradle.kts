@@ -8,6 +8,7 @@ plugins {
     java
     `maven-publish`
     application
+    idea
     kotlin("jvm") version "1.6.0"
     id("com.github.johnrengelman.shadow") version "7.0.0"
 }
@@ -74,6 +75,10 @@ publishing {
 
 tasks.withType<JavaCompile>() {
     options.encoding = "UTF-8"
+    options.compilerArgs.addAll(arrayOf(
+        "--add-exports", "java.xml/com.sun.org.apache.xml.internal.serialize=ALL-UNNAMED",
+        "--add-exports", "java.base/java.util=ALL-UNNAMED"
+    ))
 }
 
 tasks.withType<Jar> {
@@ -83,10 +88,6 @@ tasks.withType<Jar> {
 }
 val compileKotlin: KotlinCompile by tasks
 compileKotlin.kotlinOptions {
-    jvmTarget = "17"
-}
-val compileTestKotlin: KotlinCompile by tasks
-compileTestKotlin.kotlinOptions {
     jvmTarget = "17"
 }
 
@@ -110,9 +111,9 @@ tasks.test {
     }
 }
 
-tasks.withType<JavaCompile> {
-    options.compilerArgs.addAll(arrayOf(
-        "--add-exports", "java.xml/com.sun.org.apache.xml.internal.serialize=ALL-UNNAMED",
-        "--add-exports", "java.base/java.util=ALL-UNNAMED"
-    ))
-}
+//tasks.withType<JavaCompile> {
+//    options.compilerArgs.addAll(arrayOf(
+//        "--add-exports", "java.xml/com.sun.org.apache.xml.internal.serialize=ALL-UNNAMED",
+//        "--add-exports", "java.base/java.util=ALL-UNNAMED"
+//    ))
+//}
