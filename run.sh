@@ -11,7 +11,7 @@ elif [ `uname` == "Linux" ]; then
     OS_ARGS="-Dswing.defaultlaf=javax.swing.plaf.metal.MetalLookAndFeel"
 fi
 
-if [[ -z "$1" ]]; then
+if [[ -z "$DISPLAY" ]]; then
     echo 'no DISPLAY variable set. Using DISPLAY=:0.0...' 
     export DISPLAY=:0.0
 fi
